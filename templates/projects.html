@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squ1reX - Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #c4c2c2;
+        }
+        header {
+            background-color: #313131;
+            color: #f3f1f1;
+            text-align: center;
+            padding: 10px;
+        }
+        nav {
+            background-color: #444;
+            color: #f3f2f2;
+            padding: 10px;
+        }
+        nav a {
+            color: #f5f1f1;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+            border-radius: 10px; 
+            overflow: hidden; 
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #ddd;
+        }
+        .dropdown-content a:last-child {
+            border-bottom: none; 
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .project-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px; 
+            transition: background-color 0.3s; 
+        }
+        .project-card:hover {
+            background-color: #f1f1f1; 
+        }
+        .project-title {
+            margin: 0;
+        }
+        .project-description {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Squ1reX's site</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="projects">Projects</a>
+        <div class="dropdown">
+            <a href="#">Contact ▼</a>
+            <div class="dropdown-content">
+                <a href="https://t.me/JustSay_Jumbo">Telegram</a>
+                <a href="https://github.com/MaksHiper">GitHub</a>
+                <a href="https://discordapp.com/users/justsayjumbo/">Discord</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Проекты</h2>
+        <div class="project-card">
+            <h3 class="project-title"><a href="https://github.com/MaksHiper/Parser.git">Parser</a></h3>
+            <img src="{{ url_for('static', filename='parser.png') }}" alt="Parser">
+            <p class="project-description">Парсит код html страницы и сохраняет его в файл. Присутствуют 2 Варианта: 1 - интерфейс програмы в консоли 2 - графический интерфейс.</p>
+        </div>
+        <div class="project-card">
+            <h3 class="project-title"><a href="https://github.com/MaksHiper/Cs-Power-PlayerBot.git">Cs Power Player</a></h3>
+            <img src="{{ url_for('static', filename='cs_power_player.png') }}" alt="Cs Power Player">
+            <p class="project-description">Этот бот выдаст вам читы для игры в cs go. Просто нажмите на кнопку "Start" и выберите нужный вам софт.</p>
+        </div>
+        <div class="project-card">
+            <h3 class="project-title"><a href="https://github.com/MaksHiper/Password-generator.git">Password Generator</a></h3>
+            <img src="{{ url_for('static', filename='PassGenerator.png') }}" alt="Password Generator">
+            <p class="project-description">Эта программа сгенерирует надежный и защищенный пароль, который будет создан по вашему запросу.</p>
+        </div>
+        <div class="project-card">
+            <h3 class="project-title"><a href="https://github.com/MaksHiper/URL_Downloader.git">URL Downloader</a></h3>
+            <img src="{{ url_for('static', filename='URL Downloader.png') }}" alt="URL Downloader">
+            <p class="project-description">Инструмент, который поможет вам загрузить файл по ссылке для скачивания, если по какой-либо причине вы не можете его загрузить.(Укажите путь к папке загрузки файла без кавычек.)</p>
+        </div>
+    </div>
+</body>
+</html>
